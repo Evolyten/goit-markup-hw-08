@@ -1,0 +1,90 @@
+.menu-btn{
+    display: inline-flex;
+    margin: 0;
+    margin-left: auto;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    @include transition(fill);
+    &:hover,
+    &:focus{
+        fill: $link-color;
+        @include transition(fill);
+    }
+    @media screen and (min-width:$tablet) {
+    display: none;
+    }
+
+}
+
+.menu-close{
+    display: block;
+    position: absolute;
+    top: 30px;
+    right: 25px;
+    margin-left: auto;
+    @media screen and (min-width:$tablet) {
+        display: none;
+    }
+}
+.mobil-menu{
+    @media screen and (min-width:$tablet) {
+            display: flex;
+            width: 100%;
+        }
+    @media screen and (max-width:$tabletMax) {
+        display: flex;
+        position: fixed;
+        flex-direction: column;
+        justify-content: space-between;
+        top:50%;
+        left:50%;
+        transform: translate(-50%, -50%) scale(1);
+        width: 480px;
+        height: 100vh;
+        background-color: $white-color;
+        overflow-y: auto;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 1px 3px rgba(0, 0, 0, 0.16);
+        padding:48px 15px 48px 40px ;
+        z-index: 2;
+        opacity: 1;
+        visibility: visible;
+        transition: opacity 1000ms $cubic--bezier, visibility 1000ms $cubic--bezier;
+        &.is-hidden {
+            opacity: 0;
+            pointer-events: none;
+            visibility: hidden;
+            
+        }
+    }
+      @media screen and (max-width:$mobilMax) {
+          width: 100vw;
+      }
+}
+
+.menu__links{
+    margin-top: 32px;
+    display: flex;
+    margin-left: -10px;
+    @media screen and (min-width:$tablet) {
+        display: none;
+        
+    }
+    @media screen and (max-width:$mobilMax) {
+        flex-wrap: wrap;
+    }
+}
+.menu__item{
+    padding-right: 10px;
+    padding-left: 10px;
+    border-right:1px solid rgba(33, 33, 33, 0.2) ;
+    @include text-style(18px,500,0.02em,$link-color,1.22);
+    &:last-child{
+        padding-right: 0;
+        border-right: none;
+    }
+    .menu__link{
+        color: $link-color;
+    }
+    
+}

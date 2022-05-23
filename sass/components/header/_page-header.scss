@@ -1,0 +1,109 @@
+.header{
+    // position: relative;
+    background-color: $white-color;
+    border-bottom: 1px solid $border-color;
+}
+.header__container{
+    @include flex(null, center);
+    
+}
+
+
+
+.header__contact{
+    @media screen and (max-width:$tabletMax) {
+        display: flex;
+        flex-direction: column-reverse;
+        @include text-style(24px, 500, 0.02em, '', 1.17);
+    }
+    @media screen and (min-width:$tablet) {
+        display: block;
+        font-size: 12px;
+        line-height: 1.14;
+        margin-bottom: -10px;
+        padding: 21px 0;
+    }
+     @media screen and (min-width:$desktop) {
+        @include flex(null, null);
+        font-size: 14px;
+        padding: 0;
+        :not(:last-child) {
+            margin-right: 30px;
+        }
+
+}
+}
+   
+
+.contact__item{
+@media screen and (max-width:$desktopMax) {
+    &{
+        margin-bottom: 10px;
+    }
+}
+ @media screen and (max-width:$tabletMax) {
+    margin-bottom: 32px;
+
+ }
+
+}
+.contact__link{
+    color: $text-color;
+    @include flex(null, center);
+    &:hover,
+    &:focus{
+        color: $link-color;
+        @include transition(color);
+    }
+    @media screen and (min-width:$desktop) {
+        padding: 32px 0;
+        
+    }
+}
+
+@media screen and (max-width:$tabletMax) {
+    .contact__link--phone{
+        font-size: 34px;
+        color: $link-color;
+    }
+}
+
+
+.contact__svg{
+    fill: $text-color;
+    .contact__link:hover &,
+    .contact__link:focus & {
+        fill: $link-color;
+        @include transition(fill);
+        }
+    @include transition(fill);
+
+    @media screen and (max-width:$tabletMax) {
+        display: none;
+
+    }
+
+    @media screen and (min-width:$tablet) {
+        margin-right: 8px;  
+    }
+    @media screen and (min-width:$tablet) and (max-width:$desktopMax) {
+       &--mail{
+           width:14px ;
+           height: 10px;
+       } 
+        &--phone {
+            width: 10px;
+            height: 14px;
+        }
+    }
+    @media screen and (min-width:$desktop) {
+    margin-right: 10px;
+
+    }
+}
+
+.header__info{
+    @media screen and (min-width:$tablet) {
+        margin-left: auto;
+    }
+}

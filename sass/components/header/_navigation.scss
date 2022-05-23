@@ -1,0 +1,80 @@
+.nav{
+    @media screen and (min-width:$tablet) {
+        @include flex(null, center);
+    }
+    
+}
+
+.nav__logo--second {
+    color: $black-color;
+}
+
+.nav__list {
+    @include text-style(40px, 500, 0.02em, null, 1.18);
+    @media screen and (max-width:$tabletMax) {
+            margin-bottom: -32px;
+        }
+    
+    @media screen and (min-width:$tablet) {
+        @include text-style(14px, 500, 0.02em, null, 1.14);
+        @include flex(null, null);
+        margin-left: 88px;
+        }
+    @media screen and (min-width:$desktop) {
+        margin-left: 93px;
+    }
+    
+   
+}
+.nav__item{
+@media screen and (max-width:$tabletMax) {
+    margin-bottom: 32px;
+}
+@media screen and (min-width:$tablet) {
+    &:not(:last-child) {
+            margin-right: 50px;
+}
+
+}
+}
+
+.nav__link {
+    display: inline-block;
+    color: $main-color;
+    position: relative;
+    &:hover,
+    &:focus{
+        color:$link-color;
+    }
+    
+
+    @media screen and (min-width:$tablet) {
+        display: block;
+        padding: 32px 0;
+        &::after {
+            position: absolute;
+            display: block;
+            content: '';
+            width: 100%;
+            bottom: -1px;
+            border-bottom: 4px solid $link-color;
+            border-radius: 2px;
+            transform: scaleX(0);
+            @include transition();
+        
+        }
+    }
+}
+.nav__link--current{
+    color: $link-color;
+    &.nav__link::after{
+        transform: scaleX(1);
+    }
+}
+.nav__link{
+    &:hover::after,
+    &:focus::after {
+        transform: scaleX(1);
+        @include transition();
+        }
+    }

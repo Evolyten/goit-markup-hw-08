@@ -1,0 +1,64 @@
+.hero{
+    padding:118px 0;
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/hero-mobil-1x.jpg);
+    background-repeat: no-repeat;
+    max-width: 1600px;
+    margin: 0 auto;
+    background-size: cover;
+    @media (min-device-pixel-ratio: 2),
+        (-webkit-min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/hero-mobil-2x.jpg);
+        }
+
+    @media screen and (min-width:$tablet) {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/hero-tablet-1x.jpg);
+    @media (min-device-pixel-ratio: 2),
+        (-webkit-min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+            background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/hero-tablet-2x.jpg);
+        }
+    }
+    
+         @media screen and (min-width:$desktop) {
+         padding: 200px 0;
+             background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/hero-desktop-1x.jpg);
+    
+             @media (min-device-pixel-ratio: 2),
+             (-webkit-min-device-pixel-ratio: 2),
+             (min-resolution: 192dpi),
+             (min-resolution: 2dppx) {
+                 background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/hero-desktop-2x.jpg);
+             }
+         }
+    
+}
+
+.hero__content{
+    width: 390px;
+    @media screen and (min-width:$desktop){
+        width: 696px;
+    }
+    text-align: center;
+     @media screen and (max-width:($mobile - 1)) {
+        width: 100%;
+    
+    }
+    
+}
+
+.hero__head{
+    
+    @include text-style(26px, 900, 0.06em, $white-color, 1.62);
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    @media screen and (min-width:$desktop) {
+        @include text-style(44px, 900, 0.06em, $white-color, 1.36);
+    }
+    
+    
+    
+}
+

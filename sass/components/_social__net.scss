@@ -1,0 +1,28 @@
+.social{
+    @include flex(center,null);
+}
+.social__item{
+    &:not(:last-child){
+        margin-right: 10px;
+    }
+}
+.social__link{
+    @include flex(center, center);
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    fill: $white-color;
+    @include transition(background);
+    
+    &:hover,
+    &:focus{
+        background: $link-color;
+        @include transition(background);
+
+    }
+}
+
+.social__svg{
+    @include transition(fill);
+}
+

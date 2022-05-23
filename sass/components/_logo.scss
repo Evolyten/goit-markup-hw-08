@@ -1,0 +1,10 @@
+.logo {
+    font-family: 'Raleway', sans-serif;
+    @include text-style(24px, 700, 0.03em,$link-color, 1.16);
+    padding: 16px 0;
+    @media screen and (min-width:$tablet) {
+        @include text-style(26px, 700, 0.03em, $link-color, 1.2);
+        padding: 24px 0;
+        
+    }
+}

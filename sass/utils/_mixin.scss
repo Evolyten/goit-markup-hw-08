@@ -1,0 +1,17 @@
+@mixin transition($object:transform) {
+    transition: $object 250ms $cubic--bezier
+}
+
+@mixin text-style($size,$weight, $space,$color,$height){
+    font-size:$size ;
+    font-weight:$weight;
+    letter-spacing: $space;
+    color:$color;
+    line-height:$height;
+}
+
+@mixin flex($horizontal,$vertical){
+    display: flex;
+    justify-content: $horizontal;
+    align-items: $vertical;
+}

@@ -1,0 +1,22 @@
+@import "./modern-normalize";
+@import "../utils/variables";
+@import "../utils/_breakpoints";
+@import "../utils/placeholders";
+@import "../utils/mixin";
+@import "../components/global__style";
+@import "../components/social__net";
+@import "../components/header/page-header";
+@import "../components/logo";
+@import "../components/header/_navigation";
+@import "../components/studio/hero/hero";
+@import "../components/studio/advantages/advantage";
+@import "../components/studio/service/service";
+@import "../components/studio/team/team";
+@import "../components/studio/client/client";
+@import "../components/footer/footer";
+@import "../components/portfolio/project-btn";
+@import "../components/portfolio/portfolio";
+@import "../components/modal/modal";
+@import "../components/header/menu-btn"
+
+
