@@ -174,7 +174,9 @@
     color: $link-color;
     margin-left: 4px;
 }
-
+.checkbox--wrap{
+    display: block;
+}
 .modal__submit {
     display: block;
     margin: 0 auto;
