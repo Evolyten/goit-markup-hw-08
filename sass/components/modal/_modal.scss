@@ -38,7 +38,7 @@
     }
     @media screen and (max-width:($mobilMax)) {
         width: 90%;
-        padding: 30px 10px;
+        padding: 30px 20px;
         
     }
 }
@@ -149,7 +149,7 @@
     @include text-style(12px, null, 0.03em,$text-color, 1.16);
     margin-bottom: 30px;
     text-align: justify;
-    @media screen and (min-width:430px) {
+    @media screen and (min-width:451.98px) {
             align-items: flex-end;
         }
     @media screen and (min-width:$desktop) {
@@ -162,6 +162,7 @@
 }
 
 .icon__checkbox {
+    display: inline-block;
     width: 16px;
     height: 15px;
     border: 2px solid #000;

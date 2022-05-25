@@ -21,6 +21,12 @@
     }
     
 }
+.footer__first{
+@media screen and (max-width:$desktopMax) {
+        margin-bottom: 60px;
+    
+    }
+}
 
 .address {
     margin-top: 20px;
@@ -33,10 +39,7 @@
     &__contact{
         color: rgba(255, 255, 255, 0.6);
     }
-    @media screen and (max-width:$desktopMax) {
-        margin-bottom: 60px;
-        
-    }
+    
 }
 
 .address__item{
@@ -87,10 +90,10 @@
 }
 
 .footer__subscribe{
-    @media screen and (min-width:$tablet) and (max-width:($desktopMax)) {
+    @media screen and (min-width:$tablet) and (max-width:$desktopMax) {
             margin: 0 auto;
         }
-    @media screen and(min-width:($desktop )) {
+    @media screen and(min-width:$desktop) {
         margin-left: auto;
     }
     
@@ -131,7 +134,7 @@
         width: 358px;
         
     }
-    @media screen and (max-width:($desktopMax)) {
+    @media screen and (max-width:$desktopMax) {
         margin-bottom: 20px;
         
     }

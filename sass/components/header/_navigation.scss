@@ -1,8 +1,9 @@
 .nav{
     @media screen and (min-width:$tablet) {
         @include flex(null, center);
+        
     }
-    
+   
 }
 
 .nav__logo--second {
@@ -18,11 +19,8 @@
     @media screen and (min-width:$tablet) {
         @include text-style(14px, 500, 0.02em, null, 1.14);
         @include flex(null, null);
-        margin-left: 88px;
         }
-    @media screen and (min-width:$desktop) {
-        margin-left: 93px;
-    }
+    
     
    
 }
